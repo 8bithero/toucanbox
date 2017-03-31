@@ -5,7 +5,6 @@ class ContentChooser
 
   def call(users)
     users.reduce([]) do |results, user|
-      boxes_available_to_user(user[:received_contents])
       results << {
         name: user[:name],
         available_boxes: boxes_available_to_user(user[:received_contents])
